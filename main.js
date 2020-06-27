@@ -6,8 +6,8 @@ function reqListener() {
   document.querySelector("#totaldata").innerHTML = (Math.round(data.bytesProxied / 1000000000).toFixed(0));
   document.querySelector("#sessions").innerHTML = data.numActiveSessions;
   document.querySelector("#connections").innerHTML = data.numConnections;
-  document.querySelector("#uptime").innerHTML = (Math.round(data.uptimeSeconds/3600).toFixed(0));
-  
+  document.querySelector("#uptime").innerHTML = (Math.round(data.uptimeSeconds / 3600).toFixed(0));
+
 }
 
 // Create a new ajax requst
@@ -15,6 +15,6 @@ var oReq = new XMLHttpRequest();
 // Fire callback on load event
 oReq.addEventListener("load", reqListener);
 // Create the connection to our API
-oReq.open("GET", "http://159.69.16.49:22070/status");
+oReq.open("GET", "https://relay.justcyber.co.uk:46466/status");
 // Fire the request
 oReq.send();
