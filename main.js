@@ -15,6 +15,6 @@ var oReq = new XMLHttpRequest();
 // Fire callback on load event
 oReq.addEventListener("load", reqListener);
 // Create the connection to our API
-oReq.open("GET", "//relayapi.justcyber.co.uk:443/status");
+oReq.open("GET", "//relays.justcyber.co.uk:443/status");
 // Fire the request
 oReq.send();
